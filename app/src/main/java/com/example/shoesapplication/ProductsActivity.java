@@ -24,7 +24,6 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
 
         btnavview = findViewById(R.id.bottomNavigation);
-        btnavview.setSelectedItemId(R.id.account);
 
         //dieu huong den cac trang
         btnavview.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
