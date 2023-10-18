@@ -170,6 +170,7 @@
                 android:orientation="horizontal"
                 android:weightSum="4">
                 <CheckBox
+                    android:id="@+id/all_item"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="All"
@@ -184,14 +185,16 @@
                     android:textSize="15sp"
                     android:layout_weight="1"/>
                 <TextView
+                    android:id="@+id/txt_total"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="đ 1.780.000"
+                    android:text="đ 0"
                     android:textColor="@color/red"
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:layout_weight="1"/>
                 <Button
+                    android:id="@+id/btn_checkout"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:background="@color/blue_button"

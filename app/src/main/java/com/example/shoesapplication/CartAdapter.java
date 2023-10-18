@@ -1,6 +1,9 @@
 package com.example.shoesapplication;
 
 import android.content.Context;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.StrikethroughSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +36,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartHolder> {
         holder.txtPrice.setText(data.get(position).price);
         holder.txtSalePrice.setText(data.get(position).saleprice);
         holder.imgName.setImageResource(data.get(position).imgID);
+
+        //chu gacg ngang
+        String text = holder.txtPrice.getText().toString();
+        SpannableString spannableString = new SpannableString(text);
+        StrikethroughSpan strikethroughSpan = new StrikethroughSpan();
+        spannableString.setSpan(strikethroughSpan, 0, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        holder.txtPrice.setText(spannableString);
     }
 
     @Override
