@@ -103,6 +103,13 @@
             android:layout_marginRight="10dp"/>
     </LinearLayout>
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/freeship"
+        android:layout_above="@+id/footer"/>
     //footer
 
     <LinearLayout
