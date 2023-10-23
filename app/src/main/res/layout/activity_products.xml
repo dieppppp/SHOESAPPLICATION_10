@@ -6,70 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".ProductsActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/bgfooter">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="55dp"
-                android:layout_weight="1"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50sp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="Products"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txt_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Products"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                //cart
+        //cart
 
-                <ImageView
-                    android:id="@+id/cart"
-                    android:layout_width="26dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/cart" />
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/cart"
+            app:layout_constraintRight_toLeftOf="@id/message"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                //message
+        //message
 
-                <ImageView
-                    android:id="@+id/message"
-                    android:layout_width="26dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/messenger" />
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/messenger"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -112,6 +103,7 @@
             </RelativeLayout>
 
             //converse
+
             <RelativeLayout
                 android:id="@+id/pr_2"
                 android:layout_width="match_parent"
@@ -128,16 +120,17 @@
                     android:text="Converse"
                     android:textColor="@color/black"
                     android:textSize="30sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_converse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_converse"/>
+                    android:layout_below="@+id/txt_converse" />
             </RelativeLayout>
 
             //converse
+
             <RelativeLayout
                 android:id="@+id/pr_3"
                 android:layout_width="match_parent"
@@ -154,13 +147,13 @@
                     android:text="Vans"
                     android:textColor="@color/black"
                     android:textSize="30sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_vans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_vans"/>
+                    android:layout_below="@+id/txt_vans" />
             </RelativeLayout>
         </LinearLayout>
 
